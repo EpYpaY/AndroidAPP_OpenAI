@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Projet_Android</string>
+    <string name="irachat">IRAChat</string>
+    <string name="default_web_client_id" />
 </resources>

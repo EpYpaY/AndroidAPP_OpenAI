@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "263432731721",
+    "firebase_url": "https://laroutedurhum-c86a5-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "laroutedurhum-c86a5",
+    "storage_bucket": "laroutedurhum-c86a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263432731721:android:c1484fe6ca5faed3701398",
+        "android_client_info": {
+          "package_name": "com.example.projet_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263432731721-guq652b49tgm7m5mlf278h4hk7h35ist.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.projet_android",
+            "certificate_hash": "3c59202fe760365a03e159abcdafd92d32eaed1c"
+          }
+        },
+        {
+          "client_id": "263432731721-dsr1seh2f2q391b52dkql71soorbpsf9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9xxFiXc6R8x2lwODUcntk-rWnW-PM_x4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263432731721-dsr1seh2f2q391b52dkql71soorbpsf9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
