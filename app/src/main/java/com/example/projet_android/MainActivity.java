@@ -60,9 +60,23 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
-                    Intent i = new Intent(getApplicationContext(), OpenAI_Link.class);
+                    Intent i = new Intent(MainActivity.this, OpenAI_Link.class);
                     startActivity(i);
                 } else {
+                    Toast.makeText(MainActivity.this, "Vous devez être connecté pour pouvoir accéder à l'application",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        but2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null) {
+                    Intent i = new Intent(MainActivity.this, ListeResultats.class);
+                    startActivity(i);
+                }
+                else {
                     Toast.makeText(MainActivity.this, "Vous devez être connecté pour pouvoir accéder à l'application",Toast.LENGTH_SHORT).show();
                 }
             }
