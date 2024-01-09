@@ -46,6 +46,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("com.firebaseui:firebase-ui-database:8.0.2")
     implementation("androidx.paging:paging-runtime:3.2.1")
+    implementation("com.android.volley:volley:1.2.1")
 
 
     // TODO: Add the dependencies for Firebase products you want to use

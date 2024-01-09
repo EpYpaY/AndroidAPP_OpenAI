@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_element">
+
+    <EditText
+        android:id="@+id/Titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:ems="10"
+        android:hint="Nom de la bouteille"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/new_marque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Titre"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:ems="10"
+        android:hint="Marque de la bouteille"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/new_degres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_marque"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:ems="10"
+        android:hint="Degrés de la bouteille"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/new_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_degres"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:ems="10"
+        android:hint="Note de la bouteille (x.x)"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/add_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_note"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:text="Ajouter" />
+</RelativeLayout>

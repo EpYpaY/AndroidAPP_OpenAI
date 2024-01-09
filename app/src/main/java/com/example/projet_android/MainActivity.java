@@ -128,6 +128,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*@Override
+    protected void onStop() {
+        super.onStop();
+        FirebaseAuth.getInstance().signOut();
+    }*/
+
+    /*@Override
     public void onStart() {
         super.onStart();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

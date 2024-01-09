@@ -2,13 +2,14 @@ package com.example.projet_android;
 
 import static androidx.core.content.PackageManagerCompat.LOG_TAG;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,8 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.Firebase;
-import com.google.firebase.FirebaseOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,6 +29,7 @@ import java.util.List;
 
 public class ListeResultats extends AppCompatActivity {
     private RecyclerView list;
+    private ImageButton imgbtn;
     private DatabaseReference mDatabase;
     private DatabaseReference rhumCloudEndPoint;
     private FirebaseRecyclerAdapter<Rhum, RhumHolder> mRhumFirebaseAdapter;
@@ -43,12 +43,23 @@ public class ListeResultats extends AppCompatActivity {
         linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         list = findViewById(R.id.recylcerView);
+        imgbtn = findViewById(R.id.bouton_add);
         list.setLayoutManager(linearLayoutManager);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         rhumCloudEndPoint = mDatabase.child("Rhum");
         options = new FirebaseRecyclerOptions.Builder<Rhum>().setQuery(rhumCloudEndPoint,Rhum.class).build();
 
         List<Rhum> mRhumEntries = new ArrayList<>();
+
+        imgbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("coucou");
+                Intent i = new Intent(ListeResultats.this, Add_element.class);
+                startActivity(i);
+            }
+        });
+
         rhumCloudEndPoint.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -96,10 +107,6 @@ public class ListeResultats extends AppCompatActivity {
                 rootDatabaseref.setValue(data);
             }
         })*/
-
-        //final Rhum[] rhumList =
-
-
 
     }
 }
