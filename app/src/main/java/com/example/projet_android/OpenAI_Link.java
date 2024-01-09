@@ -38,8 +38,8 @@ public class OpenAI_Link extends AppCompatActivity {
     private TextView answer;
     private ImageButton send;
     private String url = "https://api.openai.com/v1/chat/completions";
-    private String apikey = "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";
-    private String apikey2 = "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";
+    private String apikey = "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";
+    private String apikey2 = "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";
     private String output = "";
 
     @Override
