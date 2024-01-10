@@ -33,6 +33,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OpenAI_Link extends AppCompatActivity {
+    // Instanciation des variables et des éléments présent sur notre layout
     private ImageButton imgb;
     private EditText prompt;
     private TextView answer;
@@ -46,13 +47,14 @@ public class OpenAI_Link extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open_ai_link);
-        //TextInputLayout prompt = findViewById();
+        // Définition des éléments sur notre app
 
         imgb = findViewById(R.id.BackHome1);
         prompt = findViewById(R.id.prompt);
         answer = findViewById(R.id.answer);
         send = findViewById(R.id.send);
 
+        /* Ajout d'un évenement lors du clic sur le bouton. Ici nous fermons la vue lorsque l'on clique sur ce bouton */
         imgb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +62,7 @@ public class OpenAI_Link extends AppCompatActivity {
             }
         });
 
+        /* Même chose ici, nous ajoutons un évennement sur notre bouton. Ici lors du clic sur le bouton, nous appelons la méthode ChatGPT */
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +72,7 @@ public class OpenAI_Link extends AppCompatActivity {
 
     }
 
+    /* Définition de la méthode ChatGPT. Cette méthode nous permet de faire le lien avec l'API ChatGPT */
     public void chatGPT(View view) {
         JSONObject jsonObject = new JSONObject();
 
